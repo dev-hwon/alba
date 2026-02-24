@@ -1,14 +1,14 @@
 <script setup>
-import { computed, h} from 'vue';
-import { useAppStore } from '@/stores/app';
+import { h, ref} from 'vue';
 import { usePopupStore } from '@/stores/popup';
 import { PopupComponent } from '@/components/popup';
 import Headers from '@/features/Headers.vue';
 import Footers from '@/features/Footers.vue';
 import Navs from './features/Navs.vue';
+import Intro from './features/Intro.vue';
+import NotiPopup from './features/NotiPopup.vue';
 
 const popupStore = usePopupStore();
-const appStore = useAppStore();
 const renderPopups = () => {
   return popupStore.getPopups.map((popup) =>
     h(PopupComponent, {
@@ -21,9 +21,13 @@ const renderPopups = () => {
     })
   );
 };
+const notiRef = ref(null);
+
 </script>
 <template>
-  <div class="global-outer">
+  <Intro />
+  <NotiPopup ref="notiRef" />
+  <div class="global-outer" :class="notiRef?.isVisible ? 'scrollLocked': ''">
     <div class="global-contaner">
       <Headers />
       <Navs />

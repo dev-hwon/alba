@@ -38,10 +38,6 @@
       background-position: center;
       // background-position: center 0;
       background-size: cover;
-      &.loading {
-        background-image: url('@/assets/images/loading.webp');
-        background-size: 60px auto;
-      }
       &.error {
         @include line-ellipsis(2);
         width: 80%;

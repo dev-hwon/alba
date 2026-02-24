@@ -1,10 +1,11 @@
 <script setup>
-import { ref, computed, watch } from "vue";
-import { IconComponent } from "@/components/icon";
+import { ref } from "vue";
 import { TabComponent } from "@/components/tab";
+import ImageComponent from "@/components/image/ImageComponent.vue";
+import introBg from '@images/intro/bg.jpg';
 
 const tabs = ref([
-  { tabId: "1", tabName: "나트랑 소개" },
+  { tabId: "1", tabName: "삿포로 소개" },
   { tabId: "2", tabName: "공항" },
   { tabId: "3", tabName: "호텔" },
   { tabId: "4", tabName: "액티비티" },
@@ -30,60 +31,54 @@ const handleSelectTab = (tabId) => {
       <div class="h-row">
         <div class="h-col h-col-12">
           <div class="tab-contents">
-            <!-- Tab 1: 나트랑 소개 -->
+            <!-- Tab 1: 삿포로 소개 -->
             <div v-if="selectedTabId === '1'" class="content-area">
-              <h2 class="main-title">나트랑 (Nha Trang)</h2>
-              
+              <h2 class="main-title">삿포로 (SAPPORO)</h2>
+
               <!-- 이미지 Placeholder -->
-              <div class="image-placeholder landscape">
-                <span>나트랑 전경 이미지</span>
-              </div>
+              <ImageComponent :src="introBg" alt="나트랑 이미지" class="local-image" />
 
               <div class="info-grid">
                 <div class="info-card">
                   <h3 class="info-title">🕐 한국과의 시차</h3>
-                  <p>우리나라보다 2시간 느립니다.<br /><small>(예. 한국: 오전 10시 / 베트남: 오전 8시)</small></p>
+                  <p>한국과 동일합니다.<br /><small>(예. 한국: 오전 10시 / 일본: 오전 10시)</small></p>
                 </div>
 
                 <div class="info-card">
                   <h3 class="info-title">🌤️ 지역 날씨</h3>
-                  <p>나트랑의 4월은 평균 최고 기온이 약 <strong>30°C</strong>로, 평균 최저 기온이 약 <strong>24°C</strong>로 한국의 초여름 날씨에 해당합니다.</p>
-                  <p>이 시기는 나트랑의 건기이며, 비가 적고 맑은 날씨가 지속되어 여행 최적기입니다.</p>
+                  <p>삿포로의 4월은 초봄~초겨울 사이 체감으로, <strong>일교차가 큰 편</strong>입니다. 평균 최고 기온 약  <strong>10~13°C</strong>, 평균 최저 기온 약 <strong>2~5°C</strong> 수준이며, 바람이 불면 체감온도가 더 낮을 수 있습니다.</p>
                 </div>
 
                 <div class="info-card">
                   <h3 class="info-title">👕 옷차림</h3>
-                  <p><strong>낮</strong>: 반팔 티, 카라티, 민소매 등 가벼운 옷들로 준비합니다.</p>
-                  <p><strong>저녁</strong>: 기온이 떨어지므로 얇은 긴소매 옷을 입거나, 반팔 티에 가디건, 바람막이 등 가벼운 외투를 챙기시기 바랍니다.</p>
+                  <p><strong>낮</strong>: 긴팔 티/셔츠 + 얇은 니트 또는 가벼운 자켓</p>
+                  <p><strong>저녁</strong>: 기온이 떨어지므로 얇은 긴소매 옷을 입거나, 반팔 티에 가디건,  바람막이 등 가벼운 외투를 챙기시기 바랍니다.</p>
                 </div>
 
                 <div class="info-card">
                   <h3 class="info-title">💰 화폐</h3>
-                  <p>베트남의 화폐인 <strong>'동(VND)'</strong>을 사용합니다.</p>
-                  <p>화폐 종류는 총 12장이지만 실질적으로는 1,000 / 2,000 / 5,000 / 10,000 / 20,000 / 50,000 / 100,000 / 200,000 / 500,000동(VND)의 9종류 화폐를 주로 사용하고 있습니다.</p>
-                  <p>최근에는 신용카드나 체크카드를 이용할 수 있는 곳이 늘어났지만, 일부 시장에서는 현금 결제만 가능하기도 하여 일부 현금을 준비하시는 것을 추천드립니다.</p>
-                  <div class="tip-box">
-                    <strong>💡 Tip.</strong> 베트남 동에서 0을 하나 빼고 절반으로 나누면 대략적인 한화 금액이 나옵니다.<br />
-                    (예. 100,000동 → 약 5,000원)
-                  </div>
+                  <p>일본 화폐인 <strong>엔화(JPY)</strong>를 사용합니다.</p>
+                  <p>카드 결제가 매우 보편적이지만, 일부 소규모 식당·시장·간식/노점은 현금이 필요할 수 있어 <strong>소액 현금을 준비하시는 것을 추천</strong>드립니다.</p>
                 </div>
 
                 <div class="info-card">
                   <h3 class="info-title">⚡ 전압</h3>
-                  <p>220V, 50Hz로 한국과 동일하여 어댑터를 준비할 필요가 없습니다.</p>
+                  <p>일본 전압은 <strong>100V, 50Hz</strong>이며, 한국(220V)과 달라 돼지코 형태(일본/미국형 플러그) 어댑터가 필요합니다.</p>
                 </div>
 
                 <div class="info-card">
                   <h3 class="info-title">📋 여권/VISA</h3>
-                  <p>입국 일로부터 <strong>6개월 이상</strong>의 유효기간이 남아 있어야 입국할 수 있습니다.</p>
-                  <p>대한민국 여권 소지자는 관광 목적으로 최대 <strong>45일간 무비자 체류</strong>가 가능합니다.</p>
+                  <p>여권은 유효기간이 충분히 남아 있어야 하며, 원활한 출입국을 위해 6개월 이상 잔여를 권장합니다.</p>
+                  <p>대한민국 여권 소지자는 관광 목적으로 최대 <strong>90일간 무비자 체류</strong>가 가능합니다.</p>
                 </div>
 
                 <div class="info-card warning">
                   <h3 class="info-title">⚠️ 주의 사항</h3>
                   <ul>
-                    <li>현지 치안은 비교적 안전하나 소매치기나 절도에 유의하시기 바랍니다.</li>
-                    <li>오토바이가 많으므로 도로 횡단 시 주의하시기 바랍니다.</li>
+                    <li>일본은 전반적으로 치안이 안전한 편이나, 관광지/번화가에서는 소지품 분실·도난에 유의하시기 바랍니다.</li>
+                    <li>4월에도 기온이 낮고 비/바람이 있을 수 있어 체온 관리에 유의해 주세요.</li>
+                    <li>도로 횡단 시 신호 준수, 자전거/차량 통행에 주의 바랍니다.</li>
+                    <li>※ (온천 이용 시) 문신, 타투, 입장 규정은 시설별로 다를 수 있으니 안내를 따르시기 바랍니다.</li>
                   </ul>
                 </div>
               </div>
@@ -92,7 +87,7 @@ const handleSelectTab = (tabId) => {
             <!-- Tab 2: 공항 -->
             <div v-if="selectedTabId === '2'" class="content-area">
               <h2 class="main-title">깜란(나트랑) 국제공항</h2>
-              
+
               <!-- 이미지 Placeholder -->
               <div class="image-placeholder landscape">
                 <span>공항 이미지</span>
@@ -140,7 +135,7 @@ const handleSelectTab = (tabId) => {
 
               <div class="facilities-section">
                 <h3 class="section-title">주요 시설</h3>
-                
+
                 <div class="facility-grid">
                   <div class="facility-card">
                     <div class="facility-icon">🍽️</div>
@@ -202,7 +197,7 @@ const handleSelectTab = (tabId) => {
 
               <div class="activity-section">
                 <h3 class="activity-title">판랑 사막 지프 투어</h3>
-                
+
                 <!-- 이미지 Placeholder -->
                 <div class="image-placeholder landscape">
                   <span>판랑 사막 지프 투어 이미지</span>
@@ -218,7 +213,7 @@ const handleSelectTab = (tabId) => {
 
               <div class="activity-section">
                 <h3 class="activity-title">쫑손사</h3>
-                
+
                 <!-- 이미지 Placeholder -->
                 <div class="image-placeholder landscape">
                   <span>쫑손사 이미지</span>
@@ -409,11 +404,9 @@ const handleSelectTab = (tabId) => {
 </template>
 <style lang="scss" scoped>
 .local-page {
-  padding: 60px 20px 80px;
-  background-color: #f8f9fa;
-
+  padding: 40px 10px;
   @media (min-width: 768px) {
-    padding: 80px 40px 100px;
+    padding: 80px 20px 100px;
   }
 
   // Tab Component Styling
@@ -440,6 +433,7 @@ const handleSelectTab = (tabId) => {
           font-weight: 500;
           color: #333;
           cursor: pointer;
+          background-clip: padding-box;
 
           @media (min-width: 768px) {
             padding: 14px 32px;
@@ -447,14 +441,14 @@ const handleSelectTab = (tabId) => {
           }
 
           &:hover {
-            border-color: #19734b;
+            border-color: #C2335F;
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(25, 115, 75, 0.2);
           }
 
           &.active {
-            background: linear-gradient(135deg, #19734b 0%, #24a65f 100%);
-            border-color: #19734b;
+            background-image: linear-gradient(135deg, #C2335F 0%, #273672 100%);
+            border-color: #C2335F00;
             color: #fff;
             box-shadow: 0 4px 16px rgba(25, 115, 75, 0.3);
 
@@ -484,7 +478,7 @@ const handleSelectTab = (tabId) => {
       .main-title {
         font-size: 28px;
         font-weight: 700;
-        color: #19734b;
+        color: #C2335F;
         margin-bottom: 8px;
         text-align: center;
 
@@ -524,7 +518,7 @@ const handleSelectTab = (tabId) => {
         color: #333;
         margin: 48px 0 24px;
         padding-bottom: 12px;
-        border-bottom: 2px solid #19734b;
+        border-bottom: 2px solid #C2335F;
 
         @media (min-width: 768px) {
           font-size: 24px;
@@ -603,7 +597,7 @@ const handleSelectTab = (tabId) => {
       background: #f8f9fa;
       border-radius: 12px;
       padding: 24px;
-      border-left: 4px solid #19734b;
+      border-left: 4px solid #C2335F;
       transition: all 0.3s ease;
 
       &:hover {
@@ -623,7 +617,7 @@ const handleSelectTab = (tabId) => {
       .info-title {
         font-size: 18px;
         font-weight: 600;
-        color: #19734b;
+        color: #C2335F;
         margin-bottom: 16px;
 
         @media (min-width: 768px) {
@@ -642,7 +636,7 @@ const handleSelectTab = (tabId) => {
         }
 
         strong {
-          color: #19734b;
+          color: #C2335F;
           font-weight: 600;
         }
 
@@ -705,7 +699,7 @@ const handleSelectTab = (tabId) => {
         flex-shrink: 0;
         width: 40px;
         height: 40px;
-        background: linear-gradient(135deg, #19734b 0%, #24a65f 100%);
+        background: linear-gradient(135deg, #C2335F 0%, #273672 100%);
         color: white;
         font-size: 18px;
         font-weight: 700;
@@ -726,7 +720,7 @@ const handleSelectTab = (tabId) => {
     .step-arrow {
       text-align: center;
       font-size: 24px;
-      color: #19734b;
+      color: #C2335F;
       margin: 4px 0;
     }
   }
@@ -781,7 +775,7 @@ const handleSelectTab = (tabId) => {
           }
 
           strong {
-            color: #19734b;
+            color: #C2335F;
           }
         }
 
@@ -807,7 +801,7 @@ const handleSelectTab = (tabId) => {
         color: #555;
 
         strong {
-          color: #19734b;
+          color: #C2335F;
         }
       }
     }
@@ -841,7 +835,7 @@ const handleSelectTab = (tabId) => {
     justify-content: center;
 
     .tag {
-      background: linear-gradient(135deg, #19734b 0%, #24a65f 100%);
+      background: linear-gradient(135deg, #C2335F 0%, #273672 100%);
       color: white;
       font-size: 14px;
       font-weight: 600;
@@ -861,7 +855,7 @@ const handleSelectTab = (tabId) => {
     .activity-title {
       font-size: 24px;
       font-weight: 700;
-      color: #19734b;
+      color: #C2335F;
       margin-bottom: 20px;
 
       @media (min-width: 768px) {
@@ -890,14 +884,14 @@ const handleSelectTab = (tabId) => {
           content: '•';
           position: absolute;
           left: 0;
-          color: #19734b;
+          color: #C2335F;
           font-size: 24px;
           line-height: 1.3;
         }
 
         &.point {
           background: #e8f5e9;
-          border-left: 3px solid #19734b;
+          border-left: 3px solid #C2335F;
           border-radius: 8px;
           padding: 16px 20px 16px 28px;
           font-weight: 500;
@@ -924,7 +918,7 @@ const handleSelectTab = (tabId) => {
       color: #333;
       margin-bottom: 24px;
       padding-bottom: 12px;
-      border-bottom: 2px solid #19734b;
+      border-bottom: 2px solid #C2335F;
 
       @media (min-width: 768px) {
         font-size: 26px;
@@ -955,7 +949,7 @@ const handleSelectTab = (tabId) => {
         &:hover {
           transform: translateY(-6px);
           box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-          border-color: #19734b;
+          border-color: #C2335F;
         }
 
         .product-name {

@@ -12,16 +12,19 @@ export default defineConfig([
 
   globalIgnores(['**/dist/**', '**/dist-ssr/**', '**/coverage/**']),
 
+  js.configs.recommended,
+  ...pluginVue.configs['flat/essential'],
+
   {
     languageOptions: {
       globals: {
         ...globals.browser,
       },
     },
+    rules: {
+      'vue/multi-word-component-names': 'off' // 일단 파일명 멀티처리 제거
+    }
   },
-
-  js.configs.recommended,
-  ...pluginVue.configs['flat/essential'],
 
   skipFormatting,
 ])
