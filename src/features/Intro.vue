@@ -27,8 +27,8 @@ onMounted(() => {
   const now = new Date().getTime();
 
   // 저장된 시간이 없거나, 현재 시간이 저장된 만료 시간보다 크면 보여줌
-  // if (!hiddenUntil || now > parseInt(hiddenUntil)) {
-  if (true) {
+  if (!hiddenUntil || now > parseInt(hiddenUntil)) {
+  // if (true) {
     isVisible.value = true;
 
 

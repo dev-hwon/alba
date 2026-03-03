@@ -1,46 +1,34 @@
 <script setup>
 import { ref } from 'vue';
 import { SwiperComponent } from '@/components/swiper';
-import { ImageComponent } from '@/components/image';
 import q1_1 from '@images/local/recommends/q1-1.jpeg';
 import q1_2 from '@images/local/recommends/q1-2.png';
 import q1_3 from '@images/local/recommends/q1-3.png';
-
 import q2_1 from '@images/local/recommends/q2-1.jpeg';
 import q2_2 from '@images/local/recommends/q2-2.png';
-
 import q3_1 from '@images/local/recommends/q3-1.jpeg';
 import q3_2 from '@images/local/recommends/q3-2.png';
 import q3_3 from '@images/local/recommends/q3-3.png';
-
 import q4_1 from '@images/local/recommends/q4-1.jpeg';
 import q4_2 from '@images/local/recommends/q4-2.png';
 import q4_3 from '@images/local/recommends/q4-3.png';
-
 import q5 from '@images/local/recommends/q5.jpeg';
-
 import q6_1 from '@images/local/recommends/q6-1.png';
 import q6_2 from '@images/local/recommends/q6-2.png';
 import q6_3 from '@images/local/recommends/q6-3.png';
-
 import q7_1 from '@images/local/recommends/q7-1.jpeg';
 import q7_2 from '@images/local/recommends/q7-2.png';
-
 import q8_1 from '@images/local/recommends/q8-1.jpeg';
 import q8_2 from '@images/local/recommends/q8-2.png';
-
 import q9_1 from '@images/local/recommends/q9-1.jpeg';
 import q9_2 from '@images/local/recommends/q9-2.png';
 import q9_3 from '@images/local/recommends/q9-3.png';
-
 import q10_1 from '@images/local/recommends/q10-1.jpeg';
 import q10_2 from '@images/local/recommends/q10-2.png';
 import q10_3 from '@images/local/recommends/q10-3.png';
-
 import q11_1 from '@images/local/recommends/q11-1.jpeg';
 import q11_2 from '@images/local/recommends/q11-2.png';
 import q11_3 from '@images/local/recommends/q11-3.png';
-
 import q12_1 from '@images/local/recommends/q12-1.jpeg';
 import q12_2 from '@images/local/recommends/q12-2.jpeg';
 
@@ -57,56 +45,56 @@ const q10Data = ref([{ title:' slide1 ',image :q10_1},{title:' slide2 ',image :q
 const q11Data = ref([{ title:' slide1 ',image :q11_1},{title:' slide2 ',image :q11_2},{title:' slide3 ',image :q11_3}]);
 const q12Data = ref([{ title:' slide1 ',image :q12_1},{title:' slide2 ',image :q12_2}]);
 
-const recommendedShops = ref([
-  {
-    name: 'Charcoal Grill and Sushi, Washoku ABURIYA Sohonten',
-    mainMenu: '사시미 모둠, 임연수어 구이',
-    hours: '17:00 ~ 22:00',
-    priceRange: '1,500엔',
-    priceRangeSub: '*메인 메뉴 기준',
-    images: [q1_1, q1_2, q1_3]
-  },
-  {
-    name: '새우라멘 이카쿠',
-    mainMenu: '새우 미소라멘',
-    hours: '[월,목~일] 11:00 ~ 익일 02:00\n[화] 17:00 ~ 23:00\n[수] 18:00 ~ 익일 01:00',
-    priceRange: '1,000엔~1,500엔',
-    images: [q2_1, q2_2]
-  },
-  {
-    name: '후쿠요시 스스키노 한가운데점',
-    mainMenu: '야키토리(닭꼬치), 모츠 소바',
-    hours: '[화-목] 18:00 ~ 익일 03:00\n[금-토] 17:00 ~ 익일 03:00\n[일] 17:00 ~ 23:15',
-    hoursSub: '*월요일 휴무, 상황에 따라 영업시간 변동 가능',
-    priceRange: '2,000엔 *메인 메뉴 기준',
-    images: [q3_1, q3_2, q3_3]
-  },
-  {
-    name: '매운라멘 카라이치 스스키노점',
-    mainMenu: '매운 간장 라멘, 매운 미소 라멘',
-    mainMenuSub: '*매운맛 조절 가능(6단계부터 추가금액 발생)',
-    hours: '[화~금, 일] 11:30 ~ 익일 05:00\n[일] 10:30 ~ 익일 05:00',
-    hoursSub: '*월요일 휴무, 상황에 따라 영업시간 변동 가능',
+// const recommendedShops = ref([
+//   {
+//     name: 'Charcoal Grill and Sushi, Washoku ABURIYA Sohonten',
+//     mainMenu: '사시미 모둠, 임연수어 구이',
+//     hours: '17:00 ~ 22:00',
+//     priceRange: '1,500엔',
+//     priceRangeSub: '*메인 메뉴 기준',
+//     images: [q1_1, q1_2, q1_3]
+//   },
+//   {
+//     name: '새우라멘 이카쿠',
+//     mainMenu: '새우 미소라멘',
+//     hours: '[월,목~일] 11:00 ~ 익일 02:00\n[화] 17:00 ~ 23:00\n[수] 18:00 ~ 익일 01:00',
+//     priceRange: '1,000엔~1,500엔',
+//     images: [q2_1, q2_2]
+//   },
+//   {
+//     name: '후쿠요시 스스키노 한가운데점',
+//     mainMenu: '야키토리(닭꼬치), 모츠 소바',
+//     hours: '[화-목] 18:00 ~ 익일 03:00\n[금-토] 17:00 ~ 익일 03:00\n[일] 17:00 ~ 23:15',
+//     hoursSub: '*월요일 휴무, 상황에 따라 영업시간 변동 가능',
+//     priceRange: '2,000엔 *메인 메뉴 기준',
+//     images: [q3_1, q3_2, q3_3]
+//   },
+//   {
+//     name: '매운라멘 카라이치 스스키노점',
+//     mainMenu: '매운 간장 라멘, 매운 미소 라멘',
+//     mainMenuSub: '*매운맛 조절 가능(6단계부터 추가금액 발생)',
+//     hours: '[화~금, 일] 11:30 ~ 익일 05:00\n[일] 10:30 ~ 익일 05:00',
+//     hoursSub: '*월요일 휴무, 상황에 따라 영업시간 변동 가능',
 
-    priceRange: '1,000엔~2,000엔',
-    images: [q4_1, q4_2, q4_3]
-  },
-  {
-    name: '잇큐',
-    mainMenu: '붓카케 우동',
-    hours: '[매일] 11:30 ~ 18:00',
-    hoursSub: '*상황에 따라 영업시간 변동 가능\n*재료 조기소진 가능',
-    priceRange: '1,000~2,000엔',
-    images: [q5]
-  },
-  {
-    name: '스키야키 젠',
-    mainMenu: '샤브샤브 / 스키야키 전문점',
-    hours: '[매일] 17:00 ~ 23:00',
-    priceRange: '5,000엔 ~6,000엔',
-    images: [q6_1, q6_2, q6_3]
-  },
-]);
+//     priceRange: '1,000엔~2,000엔',
+//     images: [q4_1, q4_2, q4_3]
+//   },
+//   {
+//     name: '잇큐',
+//     mainMenu: '붓카케 우동',
+//     hours: '[매일] 11:30 ~ 18:00',
+//     hoursSub: '*상황에 따라 영업시간 변동 가능\n*재료 조기소진 가능',
+//     priceRange: '1,000~2,000엔',
+//     images: [q5]
+//   },
+//   {
+//     name: '스키야키 젠',
+//     mainMenu: '샤브샤브 / 스키야키 전문점',
+//     hours: '[매일] 17:00 ~ 23:00',
+//     priceRange: '5,000엔 ~6,000엔',
+//     images: [q6_1, q6_2, q6_3]
+//   },
+// ]);
 </script>
 <template>
   <div class="recommends-container">
