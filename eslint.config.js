@@ -16,6 +16,17 @@ export default defineConfig([
   ...pluginVue.configs['flat/essential'],
 
   {
+    settings: {
+      'import/resolver': {
+        alias: {
+          map: [
+            ['@', './src'],
+            ['@images', './src/assets/images'], // 이 줄을 추가!
+          ],
+          extensions: ['.js', '.vue', '.json', '.jpg', '.png', '.svg'], // 이미지 확장자도 추가!
+        },
+      },
+    },
     languageOptions: {
       globals: {
         ...globals.browser,

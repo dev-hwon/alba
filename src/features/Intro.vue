@@ -52,8 +52,6 @@ onMounted(() => {
           <img :src="introLogo" alt="unicity" />
         </div>
         <div class="h-col h-col-12 col-text isActive delay-2">2026 UNICITY INTERNATIONAL<br />BIOS LIFE LEADERSHIP TRIP<br />IN SAPPORO</div>
-        <div class="h-col h-col-12 col-skip isActive delay-3"><button @click="closeIntro">Skip</button></div>
-
       </div>
     </div>
   </div>
@@ -80,7 +78,7 @@ onMounted(() => {
   background-position: center;
   transition: opacity 2s ease-in-out;
   opacity: 1;
-  z-index: 9999;
+  z-index: 1000000;
 
   &.fade-out {
     opacity: 0;
@@ -112,7 +110,6 @@ onMounted(() => {
   font-weight: bold;
   color: #fff;
   text-align: center;
-  line-height: 1.2;
 }
 .col-skip {
   text-align: center;

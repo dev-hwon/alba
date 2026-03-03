@@ -10,7 +10,7 @@ import icFooterLogo from '@images/f-logo.svg';
         </div>
         <div class="h-col col-copyright">
           서울특별시 서초구 강남대로 309, 1412호(서초동, 코리아비지니스센타)<br />
-          COPYRIGHT (c) 2025 비욘드비즈니스트래블즈 ALL Rights Reserved.
+          COPYRIGHT (c) 2026 비욘드비즈니스트래블즈 ALL Rights Reserved.
         </div>
       </div>
     </div>

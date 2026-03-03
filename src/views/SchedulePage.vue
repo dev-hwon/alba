@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from "vue";
 import { TabComponent } from "@/components/tab";
-import ImageComponent from "@/components/image/ImageComponent.vue";
+import { ImageComponent } from '@/components/image';
 import day1_1 from "@images/schedule/day1/img1.jpg";
 import day1_2 from "@images/schedule/day1/img2.jpg";
 import day2_a_1 from "@images/schedule/day2/a/img1.jpg";
@@ -21,6 +21,97 @@ const tabs = ref([
   { tabId: "2", tabName: "2차 4월17일 ~ 4월21일" },
 ]);
 const selectedTabId = ref("1");
+const scheduleInfo = ref([
+  {
+    daparture: "2026-04-13",
+    return: "2026-04-17",
+    dates: {
+      day1: {
+        date: "2026-04-13 (월)",
+        title: "삿포로 도착 후 시내 관광",
+        activities: [
+          "시코츠 호수 방문",
+          "히츠지가오카 전망대에서 삿포로 시내 조망"
+        ]
+      },
+      day2: {
+        date: "2026-04-14 (화)",
+        title: "삿포로 도착 후 시내 관광",
+        activities: [
+          "GROUP A: 다테지다이무라 (에도시대 민속촌) 방문, 오이란쇼 및 닌자쇼 관람, 노보리베츠 지옥계곡 탐방",
+          "GROUP B: 오타루 및 삿포로 시내 관광, 오타루 운하 및 오르골당 방문, 북해도 신궁, 도청사, 오토리 공원 탐방"
+        ]
+      },
+      day3: {
+        date: "2026-04-15 (수)",
+        title: "삿포로 도착 후 시내 관광",
+        activities: [
+          "GROUP A: 오타루 및 삿포로 시내 관광, 오타루 운하 및 오르골당 방문, 북해도 신궁, 도청사, 오토리 공원 탐방",
+          "GROUP B: 다테지다이무라 (에도시대 민속촌) 방문, 오이란쇼 및 닌자쇼 관람, 노보리베츠 지옥계곡 탐방"
+        ]
+      },
+      day4: {
+        date: "2026-04-16 (목)",
+        title: "삿포로 시내 자유 관광",
+        activities: [
+          "유튜버 맛집 따라 잡기",
+          "삿포로 쇼핑 핫 플레이스 추천",
+          "돈키호테 쇼핑 아이템 추천"
+        ]
+      },
+      day5: {
+        date: "2026-04-17 (금)",
+        title: "체크아웃 > 공항이동",
+        activities: []
+      }
+    }
+  },
+  {
+    daparture: "2026-04-17",
+    return: "2026-04-21",
+    dates: {
+      day1: {
+        date: "2026-04-17 (월)",
+        title: "삿포로 도착 후 시내 관광",
+        activities: [
+          "시코츠 호수 방문",
+          "히츠지가오카 전망대에서 삿포로 시내 조망"
+        ]
+      },
+      day2: {
+        date: "2026-04-18 (화)",
+        title: "삿포로 도착 후 시내 관광",
+        activities: [
+          "GROUP A: 다테지다이무라 (에도시대 민속촌) 방문, 오이란쇼 및 닌자쇼 관람, 노보리베츠 지옥계곡 탐방",
+          "GROUP B: 오타루 및 삿포로 시내 관광, 오타루 운하 및 오르골당 방문, 북해도 신궁, 도청사, 오토리 공원 탐방"
+        ]
+      },
+      day3: {
+        date: "2026-04-19 (수)",
+        title: "삿포로 도착 후 시내 관광",
+        activities: [
+          "GROUP A: 오타루 및 삿포로 시내 관광, 오타루 운하 및 오르골당 방문, 북해도 신궁, 도청사, 오토리 공원 탐방",
+          "GROUP B: 다테지다이무라 (에도시대 민속촌) 방문, 오이란쇼 및 닌자쇼 관람, 노보리베츠 지옥계곡 탐방"
+        ]
+      },
+      day4: {
+        date: "2026-04-20 (목)",
+        title: "삿포로 시내 자유 관광",
+        activities: [
+          "유튜버 맛집 따라 잡기",
+          "삿포로 쇼핑 핫 플레이스 추천",
+          "돈키호테 쇼핑 아이템 추천"
+        ]
+      },
+      day5: {
+        date: "2026-04-21 (금)",
+        title: "체크아웃 > 공항이동",
+        activities: []
+      }
+    }
+  },
+]);
+
 const handleSelectTab = (tabId) => {
   selectedTabId.value = tabId;
 };
@@ -41,8 +132,8 @@ const handleSelectTab = (tabId) => {
         <div class="h-col h-col-12">
           <div class="tab-contents">
             <div v-if="selectedTabId === '1'" class="schedule-section">
+              <!-- 1차: 1일차: 출발 -->
               <h2 class="schedule-title">1차(4월 13일 출발)</h2>
-
               <div class="box-wrap">
                 <div class="box-title">미팅 안내</div>
                 <div class="box-content">
@@ -74,11 +165,11 @@ const handleSelectTab = (tabId) => {
                   </div>
                 </div>
               </div>
-
+              <!-- 1차: 1일차 -->
               <div class="day-card">
                 <div class="day-header">
                   <div class="day-number">Day 1</div>
-                  <div class="day-date">2025-04-13 (월)</div>
+                  <div class="day-date">{{ scheduleInfo[0].dates.day1.date }}</div>
                   <div class="day-title">삿포로 도착 후 시내 관광</div>
                 </div>
                 <div class="day-activities">
@@ -94,10 +185,11 @@ const handleSelectTab = (tabId) => {
                   </div>
                 </div>
               </div>
+              <!-- 1차: 2일차 -->
               <div class="day-card">
                 <div class="day-header">
                   <div class="day-number">Day 2</div>
-                  <div class="day-date">2025-04-14 (화)</div>
+                  <div class="day-date">{{ scheduleInfo[0].dates.day2.date }}</div>
                   <div class="day-title">삿포로 도착 후 시내 관광</div>
                 </div>
                 <div class="day-activities">
@@ -144,10 +236,11 @@ const handleSelectTab = (tabId) => {
                   </div>
                 </div>
               </div>
+              <!-- 1차: 3일차 -->
               <div class="day-card">
                 <div class="day-header">
                   <div class="day-number">Day 3</div>
-                  <div class="day-date">2025-04-15 (수)</div>
+                  <div class="day-date">{{ scheduleInfo[0].dates.day3.date }}</div>
                   <div class="day-title">삿포로 도착 후 시내 관광</div>
                 </div>
                 <div class="day-activities">
@@ -194,10 +287,11 @@ const handleSelectTab = (tabId) => {
                   </div>
                 </div>
               </div>
+              <!-- 1차: 4일차 -->
               <div class="day-card">
                 <div class="day-header">
                   <div class="day-number">Day 4</div>
-                  <div class="day-date">2025-04-16 (목)</div>
+                  <div class="day-date">{{ scheduleInfo[0].dates.day4.date }}</div>
                   <div class="day-title">삿포로 시내 자유 관광</div>
                 </div>
                 <div class="day-activities">
@@ -217,20 +311,19 @@ const handleSelectTab = (tabId) => {
                   </div>
                 </div>
               </div>
-
-
+              <!-- 1차: 5일차 -->
               <div class="day-card">
                 <div class="day-header">
                   <div class="day-number">Day 5</div>
-                  <div class="day-date">2025-04-17 (금)</div>
+                  <div class="day-date">{{ scheduleInfo[0].dates.day5.date }}</div>
                   <div class="day-title">체크아웃 > 공항이동</div>
                 </div>
               </div>
-
+              <!-- 1차: 5일차: 복귀 -->
               <div class="h-row">
                 <div class="h-col h-col-12 h-col-md-6">
                   <div class="flight-info return">
-                    <div class="flight-area bg-red">인천 2터미널 출발 - 대한항공 ???? </div>
+                    <div class="flight-area">인천 2터미널 출발 - 대한항공 ???? </div>
                     <div class="flight-route">
                       <div class="city">삿포로 (SPK)<br />14:05</div>
                       <div class="flight-code"> KE 766</div>
@@ -240,7 +333,7 @@ const handleSelectTab = (tabId) => {
                 </div>
                 <div class="h-col h-col-12 h-col-md-6">
                   <div class="flight-info return">
-                    <div class="flight-area bg-red">인천 2터미널 출발 - 아시아나 ???? </div>
+                    <div class="flight-area">인천 2터미널 출발 - 아시아나 ???? </div>
                     <div class="flight-route">
                       <div class="city">삿포로 (SPK)<br />14:30</div>
                       <div class="flight-code">OZ 173</div>
@@ -251,52 +344,216 @@ const handleSelectTab = (tabId) => {
               </div>
             </div>
             <div v-if="selectedTabId === '2'" class="schedule-section">
-
-              <div class="bg-red">내용</div>
-              <!-- <h2 class="schedule-title">2차 (4월 11일 출발) 일정</h2>
-              <div class="meeting-info">
-                <div class="info-title">미팅 안내</div>
-                <div class="info-content">
-                  <p><strong>미팅 포인트:</strong> 인천국제공항 제2터미널 10번 출입구 안쪽</p>
-                  <p><strong>미팅 시간:</strong> 2025년 4월 11일(금) 15시 30분</p>
+              <!-- 2차: 1일차: 출발 -->
+              <h2 class="schedule-title">2차(4월 17일 출발)</h2>
+              <div class="box-wrap">
+                <div class="box-title">미팅 안내</div>
+                <div class="box-content">
+                  <p><strong>미팅 포인트:</strong> 인천 국제공항 제2터미널 3층 집결</p>
+                  <p><strong>미팅 시간:</strong> - </p>
                 </div>
               </div>
-
-              <div class="flight-info">
-                <div class="flight-route">
-                  <div class="city">인천 (ICN)</div>
-                  <div class="flight-code">18:35 - LJ 089</div>
-                  <div class="city">나트랑 (CXR) 21:55</div>
+              <div class="h-row">
+                <div class="h-col h-col-12 h-col-md-6">
+                  <div class="flight-info">
+                    <div class="flight-area">인천 2터미널 출발 - 대한항공</div>
+                    <div class="flight-route">
+                      <div class="city">인천 (ICN)<br />10:05</div>
+                      <div class="flight-code"> KE 765</div>
+                      <div class="city">삿포로 (SPK)<br />12:50</div>
+                    </div>
+                    <div class="hotel-name">숙소: SAPPORO GRAND HOTEL</div>
+                  </div>
                 </div>
-                <div class="hotel-name">숙소: 더 웨스틴 리조트 앤 스파 깜란</div>
+                <div class="h-col h-col-12 h-col-md-6">
+                  <div class="flight-info">
+                    <div class="flight-area">인천 2터미널 출발 - 아시아나</div>
+                    <div class="flight-route">
+                      <div class="city">인천 (ICN)<br />10:15</div>
+                      <div class="flight-code">OZ 1745</div>
+                      <div class="city">삿포로 (SPK)<br />13:00</div>
+                    </div>
+                    <div class="hotel-name">숙소: SAPPORO GRAND HOTEL</div>
+                  </div>
+                </div>
               </div>
-
-              <div class="day-card" v-for="day in [
-                { id: 1, date: '2025-04-11 (금)', title: '체크인 및 오리엔테이션' },
-                { id: 2, date: '2025-04-12 (토)', title: '투어 프로그램 선택' },
-                { id: 3, date: '2025-04-13 (일)', title: '팀별 교차 투어' },
-                { id: 4, date: '2025-04-14 (월)', title: '팀 빌딩 & 호텔 휴식' },
-                { id: 5, date: '2025-04-15 (화)', title: '시내 관광 & 공항 이동' }
-              ]" :key="day.id">
+              <!-- 2차: 1일차 -->
+              <div class="day-card">
                 <div class="day-header">
-                  <div class="day-number">Day {{ day.id }}</div>
-                  <div class="day-date">{{ day.date }}</div>
-                  <div class="day-title">{{ day.title }}</div>
+                  <div class="day-number">Day 1</div>
+                  <div class="day-date">{{ scheduleInfo[1].dates.day1.date }}</div>
+                  <div class="day-title">삿포로 도착 후 시내 관광</div>
                 </div>
-                <div class="image-placeholder">이미지 자리</div>
                 <div class="day-activities">
-                  <p class="activity-note">상세 일정은 1차 일정과 동일하게 진행됩니다.</p>
+                  <div class="activity-section">
+                    <div class="h-row h-row-mb">
+                      <div class="h-col h-col-12 h-col-md-6">
+                        <ImageComponent :src="day1_1" alt="시코츠 호수" />
+                      </div>
+                      <div class="h-col h-col-12 h-col-md-6">
+                        <ImageComponent :src="day1_2" alt="히츠지가오카 전망대" />
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-
-              <div class="flight-info return">
-                <div class="info-title">도착 일정</div>
-                <div class="flight-route">
-                  <div class="city">나트랑 (CXR)</div>
-                  <div class="flight-code">23:40 - LJ 090</div>
-                  <div class="city">인천 (ICN) 06:35 (+1)</div>
+              <!-- 2차: 2일차 -->
+              <div class="day-card">
+                <div class="day-header">
+                  <div class="day-number">Day 2</div>
+                  <div class="day-date">{{ scheduleInfo[1].dates.day2.date }}</div>
+                  <div class="day-title">삿포로 도착 후 시내 관광</div>
                 </div>
-              </div> -->
+                <div class="day-activities">
+                  <div class="h-row h-row-mb">
+                    <div class="h-col h-col-12 h-col-md-6">
+                      <div class="activity-section">
+                        <span class="section-badge">GROUP A</span>
+                        <div class="h-row h-row-mb">
+                          <div class="h-col h-col-12 h-col-md-6">
+                            <ImageComponent :src="day2_a_1" alt="다테지다이무라 (에도시대 민속촌)" />
+                          </div>
+                          <div class="h-col h-col-12 h-col-md-6">
+                            <ImageComponent :src="day2_a_2" alt="에도시대 부호의 연회 오이란쇼, 닌자쇼 관람" />
+                          </div>
+                          <div class="h-col h-col-12 h-col-md-6">
+                            <ImageComponent :src="day2_a_3" alt="일본 3대 온천의 마을 노보리베츠의 지옥계곡" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="h-col h-col-12 h-col-md-6">
+                      <div class="activity-section">
+                        <span class="section-badge">GROUP B</span>
+                        <div class="h-row h-row-mb">
+                          <div class="h-col h-col-12 h-col-md-6">
+                            <ImageComponent :src="day2_b_1" alt="오타루 및 삿포로 시내 관광" />
+                          </div>
+                          <div class="h-col h-col-12 h-col-md-6">
+                            <ImageComponent :src="day2_b_2" alt="오타루 운하 및 오르골당 관광" />
+                          </div>
+                          <div class="h-col h-col-12 h-col-md-6">
+                            <ImageComponent :src="day2_b_3" alt="북해도 신궁" />
+                          </div>
+                          <div class="h-col h-col-12 h-col-md-6">
+                            <ImageComponent :src="day2_b_4" alt="도청사" />
+                          </div>
+                          <div class="h-col h-col-12 h-col-md-6">
+                            <ImageComponent :src="day2_b_5" alt="오토리 공원" />
+                          </div>
+                        </div>
+                        <div class="section-info">🍴 중식(현지식) / 석식(자유식)</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- 2차: 3일차 -->
+              <div class="day-card">
+                <div class="day-header">
+                  <div class="day-number">Day 3</div>
+                  <div class="day-date">{{ scheduleInfo[1].dates.day3.date }}</div>
+                  <div class="day-title">삿포로 도착 후 시내 관광</div>
+                </div>
+                <div class="day-activities">
+                  <div class="h-row h-row-mb">
+                    <div class="h-col h-col-12 h-col-md-6">
+                      <div class="activity-section">
+                        <span class="section-badge">GROUP A</span>
+                        <div class="h-row h-row-mb">
+                          <div class="h-col h-col-12 h-col-md-6">
+                            <ImageComponent :src="day2_b_1" alt="오타루 및 삿포로 시내 관광" />
+                          </div>
+                          <div class="h-col h-col-12 h-col-md-6">
+                            <ImageComponent :src="day2_b_2" alt="오타루 운하 및 오르골당 관광" />
+                          </div>
+                          <div class="h-col h-col-12 h-col-md-6">
+                            <ImageComponent :src="day2_b_3" alt="북해도 신궁" />
+                          </div>
+                          <div class="h-col h-col-12 h-col-md-6">
+                            <ImageComponent :src="day2_b_4" alt="도청사" />
+                          </div>
+                          <div class="h-col h-col-12 h-col-md-6">
+                            <ImageComponent :src="day2_b_5" alt="오토리 공원" />
+                          </div>
+                        </div>
+                        <div class="section-info">🍴 중식(현지식) / 석식(자유식)</div>
+                      </div>
+                    </div>
+                    <div class="h-col h-col-12 h-col-md-6">
+                      <div class="activity-section">
+                        <span class="section-badge">GROUP B</span>
+                        <div class="h-row h-row-mb">
+                          <div class="h-col h-col-12 h-col-md-6">
+                            <ImageComponent :src="day2_a_1" alt="다테지다이무라 (에도시대 민속촌)" />
+                          </div>
+                          <div class="h-col h-col-12 h-col-md-6">
+                            <ImageComponent :src="day2_a_2" alt="에도시대 부호의 연회 오이란쇼, 닌자쇼 관람" />
+                          </div>
+                          <div class="h-col h-col-12 h-col-md-6">
+                            <ImageComponent :src="day2_a_3" alt="일본 3대 온천의 마을 노보리베츠의 지옥계곡" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- 2차: 4일차 -->
+              <div class="day-card">
+                <div class="day-header">
+                  <div class="day-number">Day 4</div>
+                  <div class="day-date">{{ scheduleInfo[1].dates.day4.date }}</div>
+                  <div class="day-title">삿포로 시내 자유 관광</div>
+                </div>
+                <div class="day-activities">
+                  <div class="activity-section">
+                    <div class="h-row h-row-mb">
+                      <div class="h-col h-col-12 h-col-md-4">
+                        <ImageComponent :src="day4_1" alt="유튜버 맛집 따라 잡기" />
+                      </div>
+                      <div class="h-col h-col-12 h-col-md-4">
+                        <ImageComponent :src="day4_2" alt="삿포로 쇼핑 핫 플레이스 추천" />
+                      </div>
+                      <div class="h-col h-col-12 h-col-md-4">
+                        <ImageComponent :src="day4_3" alt="돈키호테 쇼핑 아이템 추천" />
+                      </div>
+                    </div>
+                    <div class="section-info">🍴 중식(현지식) / 갈라디너(호텔식)</div>
+                  </div>
+                </div>
+              </div>
+              <!-- 2차: 5일차 -->
+              <div class="day-card">
+                <div class="day-header">
+                  <div class="day-number">Day 5</div>
+                  <div class="day-date">{{ scheduleInfo[1].dates.day5.date }}</div>
+                  <div class="day-title">체크아웃 > 공항이동</div>
+                </div>
+              </div>
+              <!-- 2차: 5일차: 복귀 -->
+              <div class="h-row">
+                <div class="h-col h-col-12 h-col-md-6">
+                  <div class="flight-info return">
+                    <div class="flight-area">대한항공</div>
+                    <div class="flight-route">
+                      <div class="city">삿포로 (SPK)<br />14:05</div>
+                      <div class="flight-code"> KE 766</div>
+                      <div class="city">인천 (ICN)<br />17:05</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="h-col h-col-12 h-col-md-6">
+                  <div class="flight-info return">
+                    <div class="flight-area">아시아나</div>
+                    <div class="flight-route">
+                      <div class="city">삿포로 (SPK)<br />14:30</div>
+                      <div class="flight-code">OZ 173</div>
+                      <div class="city">인천 (ICN)<br />17:05</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -419,7 +676,6 @@ const handleSelectTab = (tabId) => {
 
     .info-content {
       font-size: 15px;
-      line-height: 1.8;
       color: #555;
 
       strong {
@@ -562,7 +818,6 @@ const handleSelectTab = (tabId) => {
             position: relative;
             font-size: 15px;
             color: #555;
-            line-height: 1.6;
 
             &::before {
               content: '•';

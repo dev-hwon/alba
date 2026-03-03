@@ -45,7 +45,6 @@ watch(isVisible, (newValue) => {
 </template>
 <style lang="scss" scoped>
 .noti {
-  z-index: 100;
   .popup-contents {
     max-width: 100%;
     .img-noti {

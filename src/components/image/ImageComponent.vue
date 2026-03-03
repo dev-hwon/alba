@@ -16,7 +16,7 @@ const props = defineProps({
     <div class="image-frame">
       <img :src="props.src" :alt="props.alt" />
     </div>
-    <div class="image-alt">{{ props.alt }}</div>
+    <div v-if="props.alt" class="image-alt">{{ props.alt }}</div>
   </div>
 </template>
 
