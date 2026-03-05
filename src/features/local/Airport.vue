@@ -1,7 +1,7 @@
 <script setup>
-import { usePopupStore } from '@/stores/popup';
+// import { usePopupStore } from '@/stores/popup';
 import { ImageComponent } from '@/components/image';
-import { POPUP_SET } from '@/js/constants/popup-set';
+// import { POPUP_SET } from '@/js/constants/popup-set';
 import introBg from '@images/local/airport/airport-intro.jpeg';
 import step1 from '@images/local/airport/step1.png';
 import step2 from '@images/local/airport/step2.png';
@@ -9,14 +9,12 @@ import step3 from '@images/local/airport/step3.png';
 import step4 from '@images/local/airport/step4.png';
 import step5 from '@images/local/airport/step5.png';
 import qrCode from '@images/local/airport/qr.png';
-const popupStore = usePopupStore();
+// const popupStore = usePopupStore();
 
-const handleOpenPopup = () => {
-  popupStore.openPopup(POPUP_SET.qr);
-};
-
+// const handleOpenPopup = () => {
+//   popupStore.openPopup(POPUP_SET.qr);
+// };
 </script>
-
 <template>
   <div class="airport-container">
     <h2 class="section-title">공항</h2>

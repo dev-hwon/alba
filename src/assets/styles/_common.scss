@@ -500,6 +500,11 @@ a {
   @media (min-width: 768px) {
     font-size: 18px;
   }
+
+  strong {
+    color: var(--common-font-color-highlight);
+    font-weight: 600;
+  }
 }
 
 .section-divider {
