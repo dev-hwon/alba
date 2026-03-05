@@ -73,7 +73,7 @@ const handleSelectTab = (tabId) => {
 .local-page {
   padding: 40px 10px;
   @media (min-width: 768px) {
-    padding: 80px 20px 100px;
+    padding: 60px 20px 80px;
   }
 
   // Tab Component Styling
@@ -100,7 +100,8 @@ const handleSelectTab = (tabId) => {
           font-weight: 500;
           color: #333;
           cursor: pointer;
-          background-clip: padding-box;
+          background-clip: border-box;
+          background-origin: border-box;
 
           @media (min-width: 768px) {
             padding: 14px 32px;
@@ -115,7 +116,7 @@ const handleSelectTab = (tabId) => {
 
           &.active {
             background-image: linear-gradient(135deg, #C2335F 0%, #273672 100%);
-            border-color: #C2335F00;
+            border-color: transparent;
             color: #fff;
             box-shadow: 0 4px 16px rgba(25, 115, 75, 0.3);
 
@@ -220,146 +221,6 @@ const handleSelectTab = (tabId) => {
       opacity: 1;
       transform: translateY(0);
     }
-  }
-
-
-
-  // Info Grid (Tab 1: 나트랑 소개)
-
-
-  // Process Steps (Tab 2: 공항)
-  .process-steps {
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 20px 0;
-
-    .step-item {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      background: #f8f9fa;
-      border-radius: 12px;
-      padding: 20px;
-      margin-bottom: 12px;
-      transition: all 0.3s ease;
-
-      &:hover {
-        background: #e8f5e9;
-        transform: translateX(8px);
-      }
-
-      .step-number {
-        flex-shrink: 0;
-        width: 40px;
-        height: 40px;
-        background: linear-gradient(135deg, #C2335F 0%, #273672 100%);
-        color: white;
-        font-size: 18px;
-        font-weight: 700;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-      }
-
-      .step-content {
-        font-size: 16px;
-        font-weight: 500;
-        color: #333;
-      }
-    }
-
-    .step-arrow {
-      text-align: center;
-      font-size: 24px;
-      color: #C2335F;
-      margin: 4px 0;
-    }
-  }
-
-
-
-
-
-  .activity-section {
-    margin-bottom: 48px;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-
-    .activity-title {
-      font-size: 24px;
-      font-weight: 700;
-      color: #C2335F;
-      margin-bottom: 20px;
-
-      @media (min-width: 768px) {
-        font-size: 28px;
-      }
-    }
-
-    .activity-details {
-      list-style: none;
-      padding: 0;
-      margin: 24px 0 0;
-
-      li {
-        position: relative;
-        padding-left: 28px;
-        font-size: 15px;
-        color: #555;
-        margin-bottom: 16px;
-
-        @media (min-width: 768px) {
-          font-size: 16px;
-        }
-
-        &::before {
-          content: '•';
-          position: absolute;
-          left: 0;
-          color: #C2335F;
-          font-size: 24px;
-        }
-
-        &.point {
-          background: #e8f5e9;
-          border-left: 3px solid #C2335F;
-          border-radius: 8px;
-          padding: 16px 20px 16px 28px;
-          font-weight: 500;
-
-          &::before {
-            content: '';
-          }
-        }
-      }
-    }
-  }
-
-  // Shopping Category (Tab 5: 추천 쇼핑 리스트)
-  .shopping-category {
-    margin-bottom: 48px;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-
-    .category-title {
-      font-size: 22px;
-      font-weight: 700;
-      color: #333;
-      margin-bottom: 24px;
-      padding-bottom: 12px;
-      border-bottom: 2px solid #C2335F;
-
-      @media (min-width: 768px) {
-        font-size: 26px;
-      }
-    }
-
-
   }
 }
 </style>

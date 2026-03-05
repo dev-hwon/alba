@@ -1,11 +1,20 @@
-<script setup lang="ts">
+<script setup>
+import { usePopupStore } from '@/stores/popup';
 import { ImageComponent } from '@/components/image';
+import { POPUP_SET } from '@/js/constants/popup-set';
 import introBg from '@images/local/airport/airport-intro.jpeg';
 import step1 from '@images/local/airport/step1.png';
 import step2 from '@images/local/airport/step2.png';
 import step3 from '@images/local/airport/step3.png';
 import step4 from '@images/local/airport/step4.png';
 import step5 from '@images/local/airport/step5.png';
+
+const popupStore = usePopupStore();
+
+const handleOpenPopup = () => {
+  popupStore.openPopup(POPUP_SET.qr);
+};
+
 </script>
 
 <template>
@@ -16,7 +25,7 @@ import step5 from '@images/local/airport/step5.png';
 
     <section class="content-section">
       <div class="process-steps">
-        <div class="step-card">
+        <div class="step-card step-card-1">
           <div class="step-header">
             <span class="step-badge">01</span>
             <h3 class="step-title">입국 심사</h3>
@@ -34,7 +43,7 @@ import step5 from '@images/local/airport/step5.png';
         </div>
         <div class="connector"><div class="line"></div></div>
 
-        <div class="step-card">
+        <div class="step-card step-card-2">
           <div class="step-header">
             <span class="step-badge">02</span>
             <h3 class="step-title">수하물 수취</h3>
@@ -52,7 +61,7 @@ import step5 from '@images/local/airport/step5.png';
         </div>
         <div class="connector"><div class="line"></div></div>
 
-        <div class="step-card">
+        <div class="step-card step-card-3">
           <div class="step-header">
             <span class="step-badge">03</span>
             <h3 class="step-title">세관 검사</h3>
@@ -63,14 +72,15 @@ import step5 from '@images/local/airport/step5.png';
                 <ImageComponent :src="step3" class="step-thumb" />
               </div>
               <div class="h-col h-col-12 h-col-md-8">
-                <p class="step-text">세관 신고서를 제출하고 검사대를 통과하여 입국장 로비로 나갑니다.</p>
+                <p class="step-text">키오스크에 여권 스캔 및 QR 스캔 후 출구로 이동하여 나갑니다.</p>
+                <button type="button" class="btn-qrCode" @click="handleOpenPopup">QR 코드 보기</button>
               </div>
             </div>
           </div>
         </div>
         <div class="connector"><div class="line"></div></div>
 
-        <div class="step-card">
+        <div class="step-card step-card-4">
           <div class="step-header">
             <span class="step-badge">04</span>
             <h3 class="step-title">버스 승차장 이동</h3>
@@ -88,7 +98,7 @@ import step5 from '@images/local/airport/step5.png';
         </div>
         <div class="connector"><div class="line"></div></div>
 
-        <div class="step-card highlight">
+        <div class="step-card step-card-5">
           <div class="step-header">
             <span class="step-badge">05</span>
             <h3 class="step-title">버스 탑승</h3>
@@ -99,7 +109,7 @@ import step5 from '@images/local/airport/step5.png';
                 <ImageComponent :src="step5" class="step-thumb" />
               </div>
               <div class="h-col h-col-12 h-col-md-8">
-                <p class="step-text">예약하신 버스 번호를 확인하고 승무원의 안내에 따라 탑승합니다.</p>
+                <p class="step-text">가이드 안내에 따라 버스에 탑승합니다.</p>
               </div>
             </div>
           </div>
@@ -133,8 +143,13 @@ import step5 from '@images/local/airport/step5.png';
   border-radius: 12px;
   background-color: var(--common-bg-color);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-
-  &.highlight { border: 2px solid #3b82f6; }
+  border-width: 2px;
+  border-style: solid;
+  &.step-card-1 { border-color:  #dbeafe; }
+  &.step-card-2 { border-color:  #bfdbfe; }
+  &.step-card-3 { border-color:  #93c5fd; }
+  &.step-card-4 { border-color:  #60a5fa; }
+  &.step-card-5 { border-color:  #3b82f6; }
 
   .step-header {
     display: flex;
@@ -167,6 +182,25 @@ import step5 from '@images/local/airport/step5.png';
         font-size: 18px;
         text-align: left;
         margin-top: 0;
+      }
+    }
+    .btn-qrCode {
+      width: 100%;
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      color: #fff;
+      background-color: #3b82f6;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: #2563eb;
+      }
+      @media (min-width: 1024px) {
+        width: auto;
       }
     }
   }

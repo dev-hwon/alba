@@ -1,43 +1,50 @@
+<script setup>
+import { ImageComponent } from '@/components/image';
+import img1 from '@images/local/activity/activity-img1.jpg';
+import img2 from '@images/local/activity/activity-img2.jpg';
+import img3 from '@images/local/activity/activity-img3.webp';
+
+</script>
 <template>
   <div class="activity-container">
     <h2 class="section-title">액티비티</h2>
 
-    <div class="tags-container">
-      <span class="tag">#판랑 투어</span>
-      <span class="tag">#호핑 투어</span>
-      <span class="tag">#시내 관광</span>
-    </div>
+    <ImageComponent :src="img1" alt="" class="main-img mb20" />
 
     <div class="info-section">
-      <h3 class="info-title">판랑 사막 지프 투어</h3>
-
-      <!-- 이미지 Placeholder -->
-      <div class="image-placeholder landscape">
-        <span>판랑 사막 지프 투어 이미지</span>
+      <h3 class="section-subtitle">시코츠코 관광</h3>
+      <div class="section-details">
+        일본 최북단의 얼지 않는 호수, 시코츠코.<br />
+        일본 최북단의 얼음이 얼지 않는 부동호로 알려져 있습니다.<br />
+        맑고 깊은 호수 풍경과 자연 속에 놓인 야마엔 철교,<br />
+        그리고 시코츠코의 명물 에그포테이토까지.<br />
+        자연의 고요함과 지역의 맛을 함께 즐기는 홋카이도의 특별한 힐링 여행지입니다.
       </div>
-
-      <ul class="activity-details">
-        <li>나트랑 대표 즐길 거리! 전용 지프차를 타고 떠나는 스릴 만점 사막 체험</li>
-        <li>판랑 지역의 황금빛 모래 언덕을 지프차로 질주하며 짜릿한 스릴과 장관을 동시에 즐기는 경험</li>
-        <li>사막 속에 오아시스가?! 사막에서 물을 만나는 신비한 경험을 놓치지 마세요!</li>
-        <li class="point">📸 POINT: 사막 곳곳에서 만나는 포토 스팟에서 알록달록 예쁜 색감의 지프차와 함께 인생 사진을 남겨보세요</li>
-      </ul>
     </div>
-
-    <div class="activity-section">
-      <h3 class="activity-title">쫑손사</h3>
-
-      <!-- 이미지 Placeholder -->
-      <div class="image-placeholder landscape">
-        <span>쫑손사 이미지</span>
+    <div class="section-divider"></div>
+    <ImageComponent :src="img2" alt="" class="main-img mb20" />
+    <div class="info-section">
+      <h3 class="section-subtitle">노보리베츠 관광</h3>
+      <div class="section-details">
+        노보리베츠는 일본 홋카이도에 위치한 해안마을로, <br />
+        뜨거운 온천의 증기가 피어오르는 지옥계곡,<br />
+        에도시대의 문화를 체험하는 지다이무라, <br />
+        그리고 북해도 개척의 상징 홋츠지 가요 전망대까지.<br />
+        자연의 신비와 역사, 문화가 어우러진<br />
+        노보리베츠의 매력을 한 번에 만나는 특별한 여행지입니다.
       </div>
-
-      <ul class="activity-details">
-        <li>전통적인 건축미와 고즈넉한 분위기가 조화를 이루는 유서 깊은 불교 사찰</li>
-        <li>Phụng Hoàng 산 정상에 자리 잡고 있어 판랑 시내와 바다 전경을 조망할 수 있습니다</li>
-        <li>베트남 전통 사찰 입장 시 짧은 민소매나 반바지 착용은 가능하나, 절 내부(기도 드리는 곳)은 입장이 불가할 수 있어 사전에 유의 바랍니다</li>
-        <li class="point">🔎 POINT: 300여 개의 석조 계단을 오르면 마침내 다다르는 사찰의 한적한 분위기에서 베트남 전통 불교 건축 양식과 불상 등을 감상해 보세요</li>
-      </ul>
+    </div>
+    <div class="section-divider"></div>
+    <ImageComponent :src="img3" alt="" class="main-img mb20" />
+    <div class="info-section">
+      <h3 class="section-subtitle">오타루 관광</h3>
+      <div class="section-details">
+        오타루는 일본의 홋카이도에 위치한 중요한 항구 도시로서,<br />
+        낭만적인 풍경의 오타루 운하,<br />
+        활기 넘치는 먹거리 거리 오르골당,<br />
+        그리고 감각적인 상점들이 이어진 사포로 시내까지.<br />
+        역사와 감성, 그리고 홋카이도의 분위기를 천천히 걸으며 즐기는 매력적인 도시, 오타루입니다.
+      </div>
     </div>
   </div>
 </template>

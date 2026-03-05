@@ -33,7 +33,7 @@ defineExpose({
 });
 </script>
 <template>
-  <div ref="pinSensor" class="pin-sensor"></div>
+  <div ref="pinSensor" class="pin-sensor" :class="{ 'is-pinned': isPinned }"></div>
   <Nav class="nav-bar" :class="{ 'is-pinned': isPinned }">
     <div class="h-container">
       <div class="h-row">
@@ -52,16 +52,29 @@ defineExpose({
   </Nav>
 </template>
 <style lang="scss" scoped>
+// .pin-sensor {
+//   &.is-pinned {
+//     height: 58px;
+//     @media (max-width: 490px) {
+//       height: 86px;
+//     }
+//   }
+// }
+// .nav-bar {
+//   &.is-pinned {
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     background-color: #fff;
+//     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+//     z-index: 1000;
+//   }
+// }
 .nav-bar {
-  &.is-pinned {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-  }
+  position:sticky;
+  top: 0;
+  z-index: 1000;
 }
 .nav-menu {
   display: flex;

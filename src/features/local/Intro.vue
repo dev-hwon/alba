@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import { ImageComponent } from '@/components/image';
 import introBg from '@images/local/intro/bg.jpg';
 </script>
@@ -7,9 +7,7 @@ import introBg from '@images/local/intro/bg.jpg';
   <div class="intro-container">
     <h2 class="section-title">삿포로 (SAPPORO)</h2>
 
-    <!-- 이미지 Placeholder -->
     <ImageComponent :src="introBg" alt="삿포로 이미지" class="local-image mb40" />
-
 
     <div class="info-grid">
       <div class="info-card">

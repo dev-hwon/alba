@@ -10,9 +10,11 @@ export const usePopupStore = defineStore('popup', () => {
   return {
     ...popupState,
     ...popupGetters,
-    ...Object.keys(actions).reduce((acc, key) => {
-      acc[key] = (...args) => actions[key](popupState, ...args);
-      return acc;
-    }, {})
+    // ...Object.keys(actions).reduce((acc, key) => {
+    //   acc[key] = (...args) => actions[key](popupState, ...args);
+    //   return acc;
+    // }, {})
+    openPopup: (params) => actions.openPopup(popupState, params),
+    closePopup: () => actions.closePopup(popupState),
   };
 });

@@ -45,7 +45,7 @@ import icKakao from '@images/ic-kakao.png';
               <h3 class="box-title">행사 기간</h3>
               <p class="box-content">
                 1차 : 4월13일(월) ~ 4월 17일(토)<br />
-                2차 : 4월17일(금) ~ 4월 21일(수)
+                2차 : 4월17일(금) ~ 4월 21일(화)
               </p>
             </div>
           </div>
@@ -145,7 +145,7 @@ import icKakao from '@images/ic-kakao.png';
             <div class="box-wrap box-kakao">
               <p class="box-content">
                 <img :src="icKakao" alt="카카오톡" class="icon-kakao" />
-                카카오톡에서 <strong>유니시티 리더십트립 IN SAPPORO</strong>을 친구추가 하세요.
+                카카오톡에서 <strong>유니시티 리더십트립 삿포로</strong>를 친구추가 하세요.
               </p>
             </div>
           </div>

@@ -137,8 +137,22 @@ const handleSelectTab = (tabId) => {
               <div class="box-wrap">
                 <div class="box-title">미팅 안내</div>
                 <div class="box-content">
-                  <p><strong>미팅 포인트:</strong> 인천 국제공항 제2터미널 3층 집결</p>
-                  <p><strong>미팅 시간:</strong> - </p>
+                  <div class="h-row">
+                    <div class="h-col h-col-12 h-col-md-6">
+                      <p><strong>미팅 포인트</strong></p>
+                      <ul class="list-check">
+                        <li>대한항공 : 인천국제공항 제2터미널 3번 출입구 안쪽</li>
+                        <li>아시아나 : 인천국제공항 제2터미널 8번 출입구 안쪽</li>
+                      </ul>
+                    </div>
+                    <div class="h-col h-col-12 h-col-md-6">
+                      <p><strong>미팅 시간:</strong></p>
+                      <ul class="list-check">
+                        <li>대한항공 : 2026년 4월 17일(금) 07시 35분</li>
+                        <li>아시아나 : 2026년 4월 17일(금) 07시 15분</li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="h-row">
@@ -146,9 +160,9 @@ const handleSelectTab = (tabId) => {
                   <div class="flight-info">
                     <div class="flight-area">인천 2터미널 출발 - 대한항공</div>
                     <div class="flight-route">
-                      <div class="city">인천 (ICN)<br />10:05</div>
+                      <div class="city">인천 (ICN)<br />10:35</div>
                       <div class="flight-code"> KE 765</div>
-                      <div class="city">삿포로 (SPK)<br />12:50</div>
+                      <div class="city">삿포로 (CTS)<br />13:25</div>
                     </div>
                     <div class="hotel-name">숙소: SAPPORO GRAND HOTEL</div>
                   </div>
@@ -158,8 +172,8 @@ const handleSelectTab = (tabId) => {
                     <div class="flight-area">인천 2터미널 출발 - 아시아나</div>
                     <div class="flight-route">
                       <div class="city">인천 (ICN)<br />10:15</div>
-                      <div class="flight-code">OZ 1745</div>
-                      <div class="city">삿포로 (SPK)<br />13:00</div>
+                      <div class="flight-code">OZ 174</div>
+                      <div class="city">삿포로 (CTS)<br />13:00</div>
                     </div>
                     <div class="hotel-name">숙소: SAPPORO GRAND HOTEL</div>
                   </div>
@@ -177,9 +191,6 @@ const handleSelectTab = (tabId) => {
                     <div class="h-row h-row-mb">
                       <div class="h-col h-col-12 h-col-md-6">
                         <ImageComponent :src="day1_1" alt="시코츠 호수" />
-                      </div>
-                      <div class="h-col h-col-12 h-col-md-6">
-                        <ImageComponent :src="day1_2" alt="히츠지가오카 전망대" />
                       </div>
                     </div>
                   </div>
@@ -206,6 +217,9 @@ const handleSelectTab = (tabId) => {
                           </div>
                           <div class="h-col h-col-12 h-col-md-6">
                             <ImageComponent :src="day2_a_3" alt="일본 3대 온천의 마을 노보리베츠의 지옥계곡" />
+                          </div>
+                          <div class="h-col h-col-12 h-col-md-6">
+                            <ImageComponent :src="day1_2" alt="히츠지가오카 전망대" />
                           </div>
                         </div>
                       </div>
@@ -262,7 +276,7 @@ const handleSelectTab = (tabId) => {
                             <ImageComponent :src="day2_b_4" alt="도청사" />
                           </div>
                           <div class="h-col h-col-12 h-col-md-6">
-                            <ImageComponent :src="day2_b_5" alt="오토리 공원" />
+                            <ImageComponent :src="day2_b_5" alt="오오도리 공원" />
                           </div>
                         </div>
                         <div class="section-info">🍴 중식(현지식) / 석식(자유식)</div>
@@ -280,6 +294,9 @@ const handleSelectTab = (tabId) => {
                           </div>
                           <div class="h-col h-col-12 h-col-md-6">
                             <ImageComponent :src="day2_a_3" alt="일본 3대 온천의 마을 노보리베츠의 지옥계곡" />
+                          </div>
+                          <div class="h-col h-col-12 h-col-md-6">
+                            <ImageComponent :src="day1_2" alt="히츠지가오카 전망대" />
                           </div>
                         </div>
                       </div>
@@ -308,6 +325,14 @@ const handleSelectTab = (tabId) => {
                       </div>
                     </div>
                     <div class="section-info">🍴 중식(현지식) / 갈라디너(호텔식)</div>
+                    <div class="section-info">
+                      <p class="mb10">🛍️ 프리미엄 아울렛 자유 셔틀 운영</p>
+                      <ul class="list-dot">
+                        <li>호텔 출발 : 10:00 / 11:00 / 12:00</li>
+                        <li>아울렛 출발 : 12:00 / 13:00 / 14:00</li>
+                        <li>호텔 복귀 후 휴식</li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -323,21 +348,21 @@ const handleSelectTab = (tabId) => {
               <div class="h-row">
                 <div class="h-col h-col-12 h-col-md-6">
                   <div class="flight-info return">
-                    <div class="flight-area">인천 2터미널 출발 - 대한항공 ???? </div>
+                    <div class="flight-area">신치토세 공항 출발 - 대한항공</div>
                     <div class="flight-route">
-                      <div class="city">삿포로 (SPK)<br />14:05</div>
+                      <div class="city">삿포로 (CTS)<br />15:05</div>
                       <div class="flight-code"> KE 766</div>
-                      <div class="city">인천 (ICN)<br />17:05</div>
+                      <div class="city">인천 (ICN)<br />18:10</div>
                     </div>
                   </div>
                 </div>
                 <div class="h-col h-col-12 h-col-md-6">
                   <div class="flight-info return">
-                    <div class="flight-area">인천 2터미널 출발 - 아시아나 ???? </div>
+                    <div class="flight-area">신치토세 공항 출발 - 아시아나</div>
                     <div class="flight-route">
-                      <div class="city">삿포로 (SPK)<br />14:30</div>
-                      <div class="flight-code">OZ 173</div>
-                      <div class="city">인천 (ICN)<br />17:05</div>
+                      <div class="city">삿포로 (CTS)<br />14:30</div>
+                      <div class="flight-code">OZ 174</div>
+                      <div class="city">인천 (ICN)<br />18:05</div>
                     </div>
                   </div>
                 </div>
@@ -349,8 +374,22 @@ const handleSelectTab = (tabId) => {
               <div class="box-wrap">
                 <div class="box-title">미팅 안내</div>
                 <div class="box-content">
-                  <p><strong>미팅 포인트:</strong> 인천 국제공항 제2터미널 3층 집결</p>
-                  <p><strong>미팅 시간:</strong> - </p>
+                  <div class="h-row">
+                    <div class="h-col h-col-12 h-col-md-6">
+                      <p><strong>미팅 포인트</strong></p>
+                      <ul class="list-check">
+                        <li>대한항공 : 인천국제공항 제2터미널 3번 출입구 안쪽</li>
+                        <li>아시아나 : 인천국제공항 제2터미널 8번 출입구 안쪽</li>
+                      </ul>
+                    </div>
+                    <div class="h-col h-col-12 h-col-md-6">
+                      <p><strong>미팅 시간:</strong></p>
+                      <ul class="list-check">
+                        <li>대한항공 : 2026년 4월 17일(금) 07시 35분</li>
+                        <li>아시아나 : 2026년 4월 17일(금) 07시 15분</li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="h-row">
@@ -358,9 +397,9 @@ const handleSelectTab = (tabId) => {
                   <div class="flight-info">
                     <div class="flight-area">인천 2터미널 출발 - 대한항공</div>
                     <div class="flight-route">
-                      <div class="city">인천 (ICN)<br />10:05</div>
-                      <div class="flight-code"> KE 765</div>
-                      <div class="city">삿포로 (SPK)<br />12:50</div>
+                      <div class="city">인천 (ICN)<br />15:05</div>
+                      <div class="flight-code"> KE 766</div>
+                      <div class="city">삿포로 (SPK)<br />18:10</div>
                     </div>
                     <div class="hotel-name">숙소: SAPPORO GRAND HOTEL</div>
                   </div>
@@ -369,9 +408,9 @@ const handleSelectTab = (tabId) => {
                   <div class="flight-info">
                     <div class="flight-area">인천 2터미널 출발 - 아시아나</div>
                     <div class="flight-route">
-                      <div class="city">인천 (ICN)<br />10:15</div>
-                      <div class="flight-code">OZ 1745</div>
-                      <div class="city">삿포로 (SPK)<br />13:00</div>
+                      <div class="city">인천 (ICN)<br />14:30</div>
+                      <div class="flight-code">OZ 173</div>
+                      <div class="city">삿포로 (SPK)<br />18:05</div>
                     </div>
                     <div class="hotel-name">숙소: SAPPORO GRAND HOTEL</div>
                   </div>
@@ -419,6 +458,7 @@ const handleSelectTab = (tabId) => {
                           <div class="h-col h-col-12 h-col-md-6">
                             <ImageComponent :src="day2_a_3" alt="일본 3대 온천의 마을 노보리베츠의 지옥계곡" />
                           </div>
+
                         </div>
                       </div>
                     </div>
@@ -439,7 +479,7 @@ const handleSelectTab = (tabId) => {
                             <ImageComponent :src="day2_b_4" alt="도청사" />
                           </div>
                           <div class="h-col h-col-12 h-col-md-6">
-                            <ImageComponent :src="day2_b_5" alt="오토리 공원" />
+                            <ImageComponent :src="day2_b_5" alt="오오도리 공원" />
                           </div>
                         </div>
                         <div class="section-info">🍴 중식(현지식) / 석식(자유식)</div>
@@ -535,21 +575,21 @@ const handleSelectTab = (tabId) => {
               <div class="h-row">
                 <div class="h-col h-col-12 h-col-md-6">
                   <div class="flight-info return">
-                    <div class="flight-area">대한항공</div>
+                    <div class="flight-area">신치토세 공항 출발 - 대한항공</div>
                     <div class="flight-route">
-                      <div class="city">삿포로 (SPK)<br />14:05</div>
+                      <div class="city">삿포로 (CTS)<br />15:05</div>
                       <div class="flight-code"> KE 766</div>
-                      <div class="city">인천 (ICN)<br />17:05</div>
+                      <div class="city">인천 (ICN)<br />18:10</div>
                     </div>
                   </div>
                 </div>
                 <div class="h-col h-col-12 h-col-md-6">
                   <div class="flight-info return">
-                    <div class="flight-area">아시아나</div>
+                    <div class="flight-area">신치토세 공항 출발 - 아시아나</div>
                     <div class="flight-route">
-                      <div class="city">삿포로 (SPK)<br />14:30</div>
-                      <div class="flight-code">OZ 173</div>
-                      <div class="city">인천 (ICN)<br />17:05</div>
+                      <div class="city">삿포로 (CTS)<br />14:30</div>
+                      <div class="flight-code">OZ 174</div>
+                      <div class="city">인천 (ICN)<br />18:05</div>
                     </div>
                   </div>
                 </div>
@@ -565,7 +605,7 @@ const handleSelectTab = (tabId) => {
 .schedule-page {
   padding: 40px 10px;
   @media (min-width: 768px) {
-    padding: 80px 20px 100px;
+    padding: 60px 20px 80px;
   }
 
   // Tab Component Styling
@@ -594,7 +634,8 @@ const handleSelectTab = (tabId) => {
           background: white;
           cursor: pointer;
           transition: all 0.3s ease;
-          background-clip: padding-box;
+          background-clip: border-box;
+          background-origin: border-box;
 
           @media (min-width: 768px) {
             font-size: 16px;
@@ -609,7 +650,7 @@ const handleSelectTab = (tabId) => {
 
           &.active {
             background-image: linear-gradient(135deg, #C2335F 0%, #273672 100%);
-            border-color: #C2335F00;
+            border-color: transparent;
             color: #fff;
             box-shadow: 0 4px 16px rgba(25, 115, 75, 0.3);
 

@@ -27,7 +27,6 @@ const props = defineProps({
     overflow: hidden;
     img {
       width: 100%;
-      aspect-ratio: 16 / 9;
       background: #f0f0f0;
       transition: all 0.3s ease;
       object-fit: cover;
