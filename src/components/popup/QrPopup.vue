@@ -17,9 +17,7 @@ const handlePopupClose = () => {
     <div class="popup-inner">
       <div class="popup-contents">
         <ImageComponent :src="qrCode" alt="" class="qr-image" />
-        <ScrollComponent :padding="'0 50px'" :use-shadow="true">
-          <div class="tx-description"><pre>{{ content.description }}</pre></div>
-        </ScrollComponent>
+        <div class="tx-description"><pre>{{ props.content.description }}</pre></div>
       </div>
       <div class="popup-footer">
         <div class="btn-wrap">

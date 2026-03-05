@@ -8,7 +8,7 @@ import step2 from '@images/local/airport/step2.png';
 import step3 from '@images/local/airport/step3.png';
 import step4 from '@images/local/airport/step4.png';
 import step5 from '@images/local/airport/step5.png';
-
+import qrCode from '@images/local/airport/qr.png';
 const popupStore = usePopupStore();
 
 const handleOpenPopup = () => {
@@ -68,12 +68,15 @@ const handleOpenPopup = () => {
           </div>
           <div class="step-body">
             <div class="h-row h-row-align-center">
-              <div class="h-col h-col-12 h-col-md-4">
+              <div class="h-col h-col-8 h-col-md-4">
                 <ImageComponent :src="step3" class="step-thumb" />
               </div>
-              <div class="h-col h-col-12 h-col-md-8">
+              <div class="h-col h-col-4 h-col-md-2">
+                <ImageComponent :src="qrCode" :alt="'sample'" class="step-thumb" />
+              </div>
+              <div class="h-col h-col-12 h-col-md-6">
                 <p class="step-text">키오스크에 여권 스캔 및 QR 스캔 후 출구로 이동하여 나갑니다.</p>
-                <button type="button" class="btn-qrCode" @click="handleOpenPopup">QR 코드 보기</button>
+                <!-- <button type="button" class="btn-qrCode" @click="handleOpenPopup">QR 코드 보기</button> -->
               </div>
             </div>
           </div>

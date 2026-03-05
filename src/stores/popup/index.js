@@ -15,6 +15,6 @@ export const usePopupStore = defineStore('popup', () => {
     //   return acc;
     // }, {})
     openPopup: (params) => actions.openPopup(popupState, params),
-    closePopup: () => actions.closePopup(popupState),
+    closePopup: (id) => actions.closePopup(popupState, id),
   };
 });

@@ -495,7 +495,6 @@ a {
 .section-details {
   padding: 0;
   margin: 24px 0 0;
-
   font-size: 16px;
 
   @media (min-width: 768px) {
@@ -518,16 +517,24 @@ a {
   text-align: center;
   overflow: hidden;
   .hero-title {
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 700;
-    margin-bottom: 24px;
   }
 
   .hero-description {
     font-size: 16px;
     opacity: 0.95;
+    margin-top: 24px;
   }
-
+  @media (max-width: 370px) {
+    padding: 40px 10px;
+    .hero-title {
+      font-size: 20px;
+    }
+    .hero-description {
+      font-size: 16px;
+    }
+  }
   @media (min-width: 768px) {
     padding: 80px 20px;
 

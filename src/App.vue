@@ -22,12 +22,13 @@ const renderPopups = () => {
   );
 };
 const notiRef = ref(null);
+const introRef = ref(null);
 
 </script>
 <template>
-  <Intro />
+  <Intro ref="introRef"/>
   <NotiPopup ref="notiRef" />
-  <div class="global-outer" :class="notiRef?.isVisible ? 'scrollLocked': ''">
+  <div v-if="!introRef?.isVisible" class="global-outer" :class="notiRef?.isVisible ? 'scrollLocked': ''">
     <div class="global-contaner">
       <Headers />
       <Navs />

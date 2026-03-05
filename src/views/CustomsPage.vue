@@ -5,10 +5,11 @@
   <div class="page-common customs-page">
     <!-- Hero Section -->
     <section class="hero-section">
+      <div class="h-dimm" style="background-color: rgba(0, 0, 0, 0.2); z-index: 1;"></div>
       <div class="hero-section-bg-obj obj1"></div>
       <div class="hero-section-bg-obj obj2"></div>
       <div class="hero-section-bg-obj obj3"></div>
-      <div class="h-container">
+      <div class="h-container" style="z-index: 2;">
         <div class="h-row">
           <div class="h-col h-col-12">
             <h1 class="hero-title">설렘 가득한 삿포로 여정을 위해<br />입국 절차와 세관 정보를 사전에 안내드립니다.</h1>

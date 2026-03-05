@@ -6,10 +6,11 @@ import icKakao from '@images/ic-kakao.png';
   <div class="page-common main-page">
     <!-- Hero Section -->
     <section class="hero-section">
+      <div class="h-dimm" style="background-color: rgba(0, 0, 0, 0.2); z-index: 1;"></div>
       <div class="hero-section-bg-obj obj1"></div>
       <div class="hero-section-bg-obj obj2"></div>
       <div class="hero-section-bg-obj obj3"></div>
-      <div class="h-container">
+      <div class="h-container" style="z-index: 2;">
         <div class="h-row">
           <div class="h-col h-col-12">
             <h1 class="hero-title">2026 UNICITY INTERNATIONAL<br />BIOS LIFE LEADERSHIP TRIP<br />IN SAPPORO</h1>

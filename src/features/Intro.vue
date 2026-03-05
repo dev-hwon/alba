@@ -38,6 +38,10 @@ onMounted(() => {
     }, 3000);
   }
 });
+
+defineExpose({
+  isVisible
+});
 </script>
 <template>
   <div

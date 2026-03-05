@@ -752,7 +752,9 @@ const handleSelectTab = (tabId) => {
       gap: 16px;
       flex-wrap: wrap;
       margin-bottom: 12px;
-
+      @media (max-width: 370px) {
+        flex-direction: column;
+      }
       .city {
         font-size: 20px;
         font-weight: 700;
@@ -765,6 +767,11 @@ const handleSelectTab = (tabId) => {
       .flight-code {
         font-size: 18px;
         opacity: 0.9;
+        @media (max-width: 370px) {
+          padding: 10px 0;
+          border-top: 1px solid #fff;
+          border-bottom: 1px solid #fff;
+        }
       }
     }
 
