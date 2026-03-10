@@ -110,6 +110,9 @@ defineExpose({
           transform: scale(1);
         }
       }
+      @media (max-width: 767px) {
+        font-size: 14px;
+      }
     }
     + li {
       a {

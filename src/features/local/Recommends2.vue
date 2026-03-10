@@ -19,10 +19,6 @@ const r4Data = ref([{ title: 'slide1', image: r4 }]);
   <div class="recommends-container">
     <h2 class="section-title">현지 추천 쇼핑몰</h2>
 
-    <div class="shop-map">
-      <iframe src="https://www.google.com/maps/d/embed?mid=1B5d7P0NIGLx8OGAeEuYAjNY-k6oR_I4&ehbc=2E312F" ></iframe>
-    </div>
-
     <div class="shop-grid mb40">
       <div class="shop-card">
         <div class="shop-label">잡화점</div>
@@ -40,6 +36,10 @@ const r4Data = ref([{ title: 'slide1', image: r4 }]);
           <li>
             <div class="op-name">비 고</div>
             <div class="op-value">TAX-FREE 구매 가능</div>
+          </li>
+          <li>
+            <div class="op-name">위치</div>
+            <div class="op-value"><a href="https://maps.app.goo.gl/FXRm5mtkfbG9Lx4r9" target="_blank" class="btn-link">구글맵 바로가기</a></div>
           </li>
         </ul>
       </div>
@@ -60,6 +60,10 @@ const r4Data = ref([{ title: 'slide1', image: r4 }]);
           <li>
             <div class="op-name">비 고</div>
             <div class="op-value">TAX-FREE 구매 가능, 스테디셀러 1층 위치</div>
+          </li>
+          <li>
+            <div class="op-name">위치</div>
+            <div class="op-value"><a href="https://maps.app.goo.gl/n2yrD7NaeFoALhru7" target="_blank" class="btn-link">구글맵 바로가기</a></div>
           </li>
         </ul>
       </div>
@@ -84,6 +88,10 @@ const r4Data = ref([{ title: 'slide1', image: r4 }]);
             <div class="op-name">비 고</div>
             <div class="op-value">-</div>
           </li>
+          <li>
+            <div class="op-name">위치</div>
+            <div class="op-value"><a href="https://maps.app.goo.gl/Bx8LiSM6XTgsou1H9" target="_blank" class="btn-link">구글맵 바로가기</a></div>
+          </li>
         </ul>
       </div>
 
@@ -105,6 +113,10 @@ const r4Data = ref([{ title: 'slide1', image: r4 }]);
           <li>
             <div class="op-name">비 고</div>
             <div class="op-value">1층 여성복, 2층 남성복 / 면세 가능</div>
+          </li>
+          <li>
+            <div class="op-name">위치</div>
+            <div class="op-value"><a href="https://maps.app.goo.gl/QkG8uX2dAdhWyZXM9" target="_blank" class="btn-link">구글맵 바로가기</a></div>
           </li>
         </ul>
       </div>

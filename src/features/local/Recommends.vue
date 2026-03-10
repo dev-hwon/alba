@@ -117,6 +117,10 @@ const q12Data = ref([{ title:' slide1 ',image :q12_1},{title:' slide2 ',image :q
             <div class="op-name">금액대</div>
             <div class="op-value">1,500엔 <small>*메인 메뉴 기준</small></div>
           </li>
+          <li>
+            <div class="op-name">위치</div>
+            <div class="op-value"><a href="https://maps.app.goo.gl/swoaLBR9xHJKAbR67" target="_blank" class="btn-link">구글맵 바로가기</a></div>
+          </li>
         </ul>
       </div>
 
@@ -140,6 +144,10 @@ const q12Data = ref([{ title:' slide1 ',image :q12_1},{title:' slide2 ',image :q
           <li>
             <div class="op-name">금액대</div>
             <div class="op-value">1,000엔~1,500엔</div>
+          </li>
+          <li>
+            <div class="op-name">위치</div>
+            <div class="op-value"><a href="https://maps.app.goo.gl/E9s5ZWmEAhAEijob6" target="_blank" class="btn-link">구글맵 바로가기</a></div>
           </li>
         </ul>
       </div>
@@ -165,6 +173,10 @@ const q12Data = ref([{ title:' slide1 ',image :q12_1},{title:' slide2 ',image :q
           <li>
             <div class="op-name">금액대</div>
             <div class="op-value">1,000엔~1,500엔</div>
+          </li>
+          <li>
+            <div class="op-name">위치</div>
+            <div class="op-value"><a href="https://maps.app.goo.gl/VNhBNyqh2H4KB3QB7" target="_blank" class="btn-link">구글맵 바로가기</a></div>
           </li>
         </ul>
       </div>
@@ -193,6 +205,10 @@ const q12Data = ref([{ title:' slide1 ',image :q12_1},{title:' slide2 ',image :q
             <div class="op-name">금액대</div>
             <div class="op-value">1,000엔~2,000엔</div>
           </li>
+          <li>
+            <div class="op-name">위치</div>
+            <div class="op-value"><a href="https://maps.app.goo.gl/K273oZQ1rM7UE1mC6" target="_blank" class="btn-link">구글맵 바로가기</a></div>
+          </li>
         </ul>
       </div>
 
@@ -216,6 +232,10 @@ const q12Data = ref([{ title:' slide1 ',image :q12_1},{title:' slide2 ',image :q
             <div class="op-name">금액대</div>
             <div class="op-value">1,000엔~2,000엔</div>
           </li>
+          <li>
+            <div class="op-name">위치</div>
+            <div class="op-value"><a href="https://maps.app.goo.gl/swoaLBR9xHJKAbR67" target="_blank" class="btn-link">구글맵 바로가기</a></div>
+          </li>
         </ul>
       </div>
 
@@ -235,6 +255,10 @@ const q12Data = ref([{ title:' slide1 ',image :q12_1},{title:' slide2 ',image :q
           <li>
             <div class="op-name">금액대</div>
             <div class="op-value">5,000엔~6,000엔</div>
+          </li>
+          <li>
+            <div class="op-name">위치</div>
+            <div class="op-value"><a href="https://maps.app.goo.gl/ZiMYW92vxdQJm5vUA" target="_blank" class="btn-link">구글맵 바로가기</a></div>
           </li>
         </ul>
       </div>
@@ -259,6 +283,10 @@ const q12Data = ref([{ title:' slide1 ',image :q12_1},{title:' slide2 ',image :q
             <div class="op-name">금액대</div>
             <div class="op-value">1,300엔~</div>
           </li>
+          <li>
+            <div class="op-name">위치</div>
+            <div class="op-value"><a href="https://maps.app.goo.gl/m5aks1XjtJAmJfGN6" target="_blank" class="btn-link">구글맵 바로가기</a></div>
+          </li>
         </ul>
       </div>
 
@@ -282,6 +310,10 @@ const q12Data = ref([{ title:' slide1 ',image :q12_1},{title:' slide2 ',image :q
           <li>
             <div class="op-name">금액대</div>
             <div class="op-value">1,400엔~</div>
+          </li>
+          <li>
+            <div class="op-name">위치</div>
+            <div class="op-value"><a href="https://maps.app.goo.gl/2nNLwfpbvXLvnpx69" target="_blank" class="btn-link">구글맵 바로가기</a></div>
           </li>
         </ul>
       </div>
@@ -308,6 +340,10 @@ const q12Data = ref([{ title:' slide1 ',image :q12_1},{title:' slide2 ',image :q
             <div class="op-name">금액대</div>
             <div class="op-value">1인당 2,000엔~</div>
           </li>
+          <li>
+            <div class="op-name">위치</div>
+            <div class="op-value"><a href="https://maps.app.goo.gl/wLjiUjs7R3tHPnAi7" target="_blank" class="btn-link">구글맵 바로가기</a></div>
+          </li>
         </ul>
       </div>
 
@@ -330,6 +366,10 @@ const q12Data = ref([{ title:' slide1 ',image :q12_1},{title:' slide2 ',image :q
               1280엔~1,780엔
               <div class="kick">*메인 메뉴 기준</div>
             </div>
+          </li>
+          <li>
+            <div class="op-name">위치</div>
+            <div class="op-value"><a href="https://maps.app.goo.gl/6HZpbXiXx6D2eZ2R6" target="_blank" class="btn-link">구글맵 바로가기</a></div>
           </li>
         </ul>
       </div>
@@ -354,6 +394,10 @@ const q12Data = ref([{ title:' slide1 ',image :q12_1},{title:' slide2 ',image :q
               <div class="kick">*접시 색깔별 금액 상이</div>
             </div>
           </li>
+          <li>
+            <div class="op-name">위치</div>
+            <div class="op-value"><a href="https://maps.app.goo.gl/77qfkMF7mL1LVz9v8" target="_blank" class="btn-link">구글맵 바로가기</a></div>
+          </li>
         </ul>
       </div>
 
@@ -373,6 +417,10 @@ const q12Data = ref([{ title:' slide1 ',image :q12_1},{title:' slide2 ',image :q
           <li>
             <div class="op-name">금액대</div>
             <div class="op-value">1,500엔~2,000엔 대</div>
+          </li>
+          <li>
+            <div class="op-name">위치</div>
+            <div class="op-value"><a href="https://maps.app.goo.gl/ZuFTSWKHwAjaxqQ77" target="_blank" class="btn-link">구글맵 바로가기</a></div>
           </li>
         </ul>
       </div>

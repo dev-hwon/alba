@@ -1,4 +1,6 @@
 <script setup>
+import ImageComponent from '@/components/image/ImageComponent.vue';
+import img1 from '@images/main/img1.jpg';
 import icKakao from '@images/ic-kakao.png';
 </script>
 
@@ -49,6 +51,31 @@ import icKakao from '@images/ic-kakao.png';
                 2차 : 4월17일(금) ~ 4월 21일(화)
               </p>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- dresscode Section -->
+    <section class="section dresscode-section">
+      <div class="h-container">
+        <div class="h-row">
+          <div class="h-col h-col-12">
+            <h2 class="section-title">만찬 드레스코드 안내</h2>
+          </div>
+        </div>
+        <div class="h-row">
+          <div class="h-col h-col-12 h-col-md-9">
+            <div class="box-wrap ">
+              <h3 class="box-title">DRESS CODE:PINK</h3>
+              <p class="box-content">
+                4월 삿포로에서 함께하는 만찬의 드레스 코드는 <strong>핑크(Pink)</strong> 입니다.<br />
+                우리 모두가 만들어내는 ‘핑크빛 벚꽃의 물결’로 특별한 밤을 완성해 주시기 바랍니다.
+              </p>
+            </div>
+          </div>
+          <div class="h-col h-col-12 h-col-md-3">
+            <ImageComponent :src="img1" />
           </div>
         </div>
       </div>
@@ -177,7 +204,7 @@ import icKakao from '@images/ic-kakao.png';
       background-size: cover;
       background-position: 0 0;
       background-repeat: no-repeat;
-      animation: spin 10s linear infinite;
+      animation: spin 30s linear infinite;
       &.obj1 {
         top: -70%;
         left: 0;

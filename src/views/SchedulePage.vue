@@ -30,7 +30,7 @@ const scheduleInfo = ref([
         date: "2026-04-13 (월)",
         title: "삿포로 도착 후 시내 관광",
         activities: [
-          "시코츠 호수 방문",
+          "시코츠호 방문",
           "히츠지가오카 전망대에서 삿포로 시내 조망"
         ]
       },
@@ -74,7 +74,7 @@ const scheduleInfo = ref([
         date: "2026-04-17 (월)",
         title: "삿포로 도착 후 시내 관광",
         activities: [
-          "시코츠 호수 방문",
+          "시코츠호 방문",
           "히츠지가오카 전망대에서 삿포로 시내 조망"
         ]
       },
@@ -190,7 +190,7 @@ const handleSelectTab = (tabId) => {
                   <div class="activity-section">
                     <div class="h-row h-row-mb">
                       <div class="h-col h-col-12 h-col-md-6">
-                        <ImageComponent :src="day1_1" alt="시코츠 호수" />
+                        <ImageComponent :src="day1_1" alt="시코츠호" />
                       </div>
                     </div>
                   </div>
@@ -348,7 +348,7 @@ const handleSelectTab = (tabId) => {
               <div class="h-row">
                 <div class="h-col h-col-12 h-col-md-6">
                   <div class="flight-info return">
-                    <div class="flight-area">신치토세 공항 출발 - 대한항공</div>
+                    <div class="flight-area">신치토세 국제공항 출발 - 대한항공</div>
                     <div class="flight-route">
                       <div class="city">삿포로 (CTS)<br />15:05</div>
                       <div class="flight-code"> KE 766</div>
@@ -358,7 +358,7 @@ const handleSelectTab = (tabId) => {
                 </div>
                 <div class="h-col h-col-12 h-col-md-6">
                   <div class="flight-info return">
-                    <div class="flight-area">신치토세 공항 출발 - 아시아나</div>
+                    <div class="flight-area">신치토세 국제공항 출발 - 아시아나</div>
                     <div class="flight-route">
                       <div class="city">삿포로 (CTS)<br />14:30</div>
                       <div class="flight-code">OZ 174</div>
@@ -399,7 +399,7 @@ const handleSelectTab = (tabId) => {
                     <div class="flight-route">
                       <div class="city">인천 (ICN)<br />15:05</div>
                       <div class="flight-code"> KE 766</div>
-                      <div class="city">삿포로 (SPK)<br />18:10</div>
+                      <div class="city">삿포로 (CTS)<br />18:10</div>
                     </div>
                     <div class="hotel-name">숙소: SAPPORO GRAND HOTEL</div>
                   </div>
@@ -410,7 +410,7 @@ const handleSelectTab = (tabId) => {
                     <div class="flight-route">
                       <div class="city">인천 (ICN)<br />14:30</div>
                       <div class="flight-code">OZ 173</div>
-                      <div class="city">삿포로 (SPK)<br />18:05</div>
+                      <div class="city">삿포로 (CTS)<br />18:05</div>
                     </div>
                     <div class="hotel-name">숙소: SAPPORO GRAND HOTEL</div>
                   </div>
@@ -427,7 +427,7 @@ const handleSelectTab = (tabId) => {
                   <div class="activity-section">
                     <div class="h-row h-row-mb">
                       <div class="h-col h-col-12 h-col-md-6">
-                        <ImageComponent :src="day1_1" alt="시코츠 호수" />
+                        <ImageComponent :src="day1_1" alt="시코츠호" />
                       </div>
                       <div class="h-col h-col-12 h-col-md-6">
                         <ImageComponent :src="day1_2" alt="히츠지가오카 전망대" />
@@ -575,7 +575,7 @@ const handleSelectTab = (tabId) => {
               <div class="h-row">
                 <div class="h-col h-col-12 h-col-md-6">
                   <div class="flight-info return">
-                    <div class="flight-area">신치토세 공항 출발 - 대한항공</div>
+                    <div class="flight-area">신치토세 국제공항 출발 - 대한항공</div>
                     <div class="flight-route">
                       <div class="city">삿포로 (CTS)<br />15:05</div>
                       <div class="flight-code"> KE 766</div>
@@ -585,7 +585,7 @@ const handleSelectTab = (tabId) => {
                 </div>
                 <div class="h-col h-col-12 h-col-md-6">
                   <div class="flight-info return">
-                    <div class="flight-area">신치토세 공항 출발 - 아시아나</div>
+                    <div class="flight-area">신치토세 국제공항 출발 - 아시아나</div>
                     <div class="flight-route">
                       <div class="city">삿포로 (CTS)<br />14:30</div>
                       <div class="flight-code">OZ 174</div>

@@ -35,7 +35,7 @@
             </div>
 
             <div class="box-wrap">
-              <h3 class="box-title-strong">삿포로 치토세 국제공항 입국 시, 입국∙세관 신고서 작성 필요</h3>
+              <h3 class="box-title-strong">신치토세 국제공항 입국 시, 입국∙세관 신고서 작성 필요</h3>
 
               <div class="list-group">
                 <h4 class="box-title">1. Visit Japan Web이란?</h4>
@@ -183,7 +183,7 @@
       background-size: cover;
       background-position: 0 0;
       background-repeat: no-repeat;
-      animation: spin 10s linear infinite;
+      animation: spin 30s linear infinite;
       &.obj1 {
         top: -70%;
         left: 0;

@@ -14,7 +14,8 @@
     "preview": "vite preview",
     "lint": "eslint . --fix --cache",
     "format": "prettier --write --experimental-cli src/",
-    "deploy:dev": "npm run build:dev && gh-pages -d dist"
+    "deploy:dev": "npm run build:dev && gh-pages -d dist",
+    "deploy:prod": "npm run build:prod && gh-pages -d dist"
   },
   "dependencies": {
     "pinia": "^3.0.4",

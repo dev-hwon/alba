@@ -5,6 +5,7 @@
   --common-font-family: 'Noto Sans KR', 'Noto Sans', -apple-system, sans-serif;
   --common-font-color-default: #333;
   --common-font-color-highlight: #C2335F;
+  --common-font-color-highlight-hover: #dd547d;
   --common-bg-color: #f8f9fa;
   --common-bg-gradient-default: linear-gradient(135deg, #dedddd 0%, #e8e8e8 100%);
   --common-bg-gradient: linear-gradient(135deg, #C2335F 0%, #273672 100%);
@@ -899,6 +900,17 @@ a {
         .op-value {
           .kick {
             color: #C2335F;
+          }
+          .btn-link {
+            display: inline-block;
+            padding: 3px 8px 5px;
+            border-radius: 4px;
+            color: #fff;
+            transition: background-color 0.4s;
+            background-color: var(--common-font-color-highlight);
+            &:hover {
+              background-color: var(--common-font-color-highlight-hover);
+            }
           }
         }
         @media (min-width: 768px) {
